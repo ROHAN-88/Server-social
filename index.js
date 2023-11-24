@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-//!acces control
+//!access control
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
@@ -27,7 +27,7 @@ app.use((req, res, next) => {
   return next();
 });
 
-/*ROUTES */
+/*//!ROUTES */
 
 app.use(userRoutes);
 app.use(postRoutes);
