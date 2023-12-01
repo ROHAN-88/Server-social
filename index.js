@@ -2,6 +2,7 @@ import express from "express";
 import db_connect from "./db_connect.js";
 import userRoutes from "./User/user.routes.js";
 import postRoutes from "./post/blog/post.js";
+import firebaseRoutes from "./firebase/firebase.js";
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
 
 app.use(userRoutes);
 app.use(postRoutes);
+app.use(firebaseRoutes);
 
 /* database and port */
 await db_connect();
